@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-emails_worker_service-0b4f9c4a-f64a-45d5-97de-7bb4290b407c</UserSecretsId>
+    <RootNamespace>emails_worker_service</RootNamespace>
+    <Platforms>AnyCPU;x64</Platforms>
+	<GenerateProgramFile>false</GenerateProgramFile>
+
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="formModels.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>6</VersionMinor>
+      <VersionMajor>9</VersionMajor>
+      <Guid>00062fff-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BotSharp.Core" Version="1.6.1" />
+    <PackageReference Include="CsvHelper" Version="33.0.1" />
+    <PackageReference Include="DocX" Version="3.0.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.61" />
+    <PackageReference Include="IronPython" Version="3.4.1" />
+    <PackageReference Include="itext" Version="8.0.4" />
+    <PackageReference Include="Khaos.MediatR.Rpc.Codecs.NewtosoftJson" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="Microsoft.ML" Version="3.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+    <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.15.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+    <PackageReference Include="NUnitTestAdapter" Version="2.3.0" />
+    <PackageReference Include="OpenCvSharp4" Version="4.10.0.20240616" />
+    <PackageReference Include="OpenXmlPowerTools" Version="4.5.3.2" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.6" />
+    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="21.0.29" />
+    <PackageReference Include="Tesseract" Version="5.2.0" />
+    <PackageReference Include="Xceed.Words.NET" Version="3.0.24152.1219" />
+    <PackageReference Include="xunit" Version="2.9.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Tests\files\" />
+  </ItemGroup>
+</Project>
