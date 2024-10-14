@@ -1,4 +1,4 @@
-![מבנה מערכת](https://github.com/user-attachments/assets/807915ca-d0f4-4503-b895-5146c00dd2fd)![Worker drawio](https://github.com/user-attachments/assets/6c562743-9535-4511-bbe1-7f1f43b1deca)# HR Automation Service
+# HR Automation Service
 
 ## Overview
 
